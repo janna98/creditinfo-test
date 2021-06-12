@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +15,20 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('info');
+});
+
+Route::get('/new', function () {
+    return view('new');
+});
+
+Route::post('/info', function (Request $request) {
+    $validatedData = $request->validate([
+        'title' => ['required'],
+    ]);
+
+    $title = $request->title;
+    $body = $request->body;
+    $request->session()->push('information', array("title"=>$title, "body"=>$body));
+    return redirect('/');
 });
