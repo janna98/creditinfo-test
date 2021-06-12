@@ -12,14 +12,14 @@
 
         <!-- Task Name -->
         <div class="form-group">
-            <label for="info" class="col-sm-3 control-label">Pealkiri</label>
+            <label for="info" class="col-sm-3 control-label">Title</label>
 
             <div class="col-sm-6">
                 <input type="text" name="title" id="title" class="form-control">
             </div>
         </div>
         <div class="form-group">
-            <label for="info" class="col-sm-3 control-label">Sisu</label>
+            <label for="info" class="col-sm-3 control-label">Body</label>
 
             <div class="col-sm-6">
                 <input type="text" name="body" id="body" class="form-control">
